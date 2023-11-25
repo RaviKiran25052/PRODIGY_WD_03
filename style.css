@@ -1,0 +1,91 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: system-ui, 'Segoe UI', Roboto;
+	background-color: #f0f0f0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+ }
+ 
+ /* Style the game container */
+ .tic-tac-toe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	background-size: cover;
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(10px);
+ }
+ .game-title {
+	font-family: 'Arial', sans-serif;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+ /* Style the game grid */
+ .grid {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	grid-gap: 10px;
+	margin-top: 20px;
+ }
+ 
+ /* Style the individual cells */
+ .cell {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #3498db;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	cursor: pointer;
+	color: #3498db;
+	background-color: #fff;
+	border-radius: 5px;
+	transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ .cell:hover {
+	background-color: #3498db;
+	color: #fff;
+ }
+ 
+ /* Style the Start Game button */
+ button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+ }
+ 
+ button:hover {
+	background-color: #27ae60;
+ }
+ .win {
+	background-color: #7eff7e; /* Change color to green */
+	color: #333; /* Change text color for better visibility */
+ }
+ /* Add blinking animation */
+@keyframes blink {
+	0% { background-color: transparent; }
+	50% { background-color: #ff4d4d; } /* Red color */
+	100% { background-color: transparent; }
+ }
+ 
+ .blink {
+	animation: blink 0.8s ease infinite; /* Adjust timing as needed */
+ }
+ 
