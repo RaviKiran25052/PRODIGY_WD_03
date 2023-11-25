@@ -19,7 +19,6 @@ function startGame() {
   if (!gameStarted) {
     gameStarted = true;
     startBtn.innerText = 'Restart Game';
-    startBtn.style.backgroundColor = '#ff3333'; // Change button color to red
 
     cells.forEach(cell => {
       cell.innerText = '';

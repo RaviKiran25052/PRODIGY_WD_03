@@ -2,43 +2,38 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: system-ui, 'Segoe UI', Roboto;
-	background-color: #f0f0f0;
+	background-image: url('bg.jpg');
+	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
- }
- 
- /* Style the game container */
- .tic-tac-toe {
+}
+.tic-tac-toe {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 20px;
-	background-size: cover;
+	border: solid 5px rgba(255,255,255,0.5);
 	border-radius: 15px;
-	backdrop-filter: blur(10px);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	backdrop-filter: blur(10px);
- }
- .game-title {
+	backdrop-filter: blur(20px);
+}
+.game-title {
 	font-family: 'Arial', sans-serif;
 	font-size: 36px;
 	text-align: center;
 	margin-bottom: 20px;
-	color: #333;
+	color: #fff;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
- }
- /* Style the game grid */
- .grid {
+}
+.grid {
 	display: grid;
 	grid-template-columns: repeat(3, 100px);
 	grid-gap: 10px;
 	margin-top: 20px;
- }
- 
- /* Style the individual cells */
- .cell {
+}
+.cell {
 	width: 100px;
 	height: 100px;
 	border: 2px solid #3498db;
@@ -48,18 +43,15 @@ body {
 	font-size: 36px;
 	cursor: pointer;
 	color: #3498db;
-	background-color: #fff;
 	border-radius: 5px;
+	background-color: #ffcb43;
 	transition: background-color 0.3s, color 0.3s;
- }
- 
- .cell:hover {
-	background-color: #3498db;
+}
+.cell:hover {
+	background-color: #fd1683;
 	color: #fff;
- }
- 
- /* Style the Start Game button */
- button {
+}
+button {
 	margin-top: 20px;
 	padding: 10px 20px;
 	font-size: 16px;
@@ -69,23 +61,19 @@ body {
 	border: none;
 	border-radius: 5px;
 	transition: background-color 0.3s;
- }
- 
- button:hover {
+}
+button:hover {
 	background-color: #27ae60;
- }
- .win {
-	background-color: #7eff7e; /* Change color to green */
-	color: #333; /* Change text color for better visibility */
- }
- /* Add blinking animation */
+}
+.win {
+	background-color: #7eff7e;
+	color: #333;
+}
 @keyframes blink {
 	0% { background-color: transparent; }
-	50% { background-color: #ff4d4d; } /* Red color */
+	50% { background-color: #ff4d4d; }
 	100% { background-color: transparent; }
- }
- 
- .blink {
-	animation: blink 0.8s ease infinite; /* Adjust timing as needed */
- }
- 
+}
+.blink {
+	animation: blink 0.8s ease infinite;
+}
